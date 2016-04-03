@@ -9,6 +9,9 @@ v0.1.7
 - Added ``nginx__deploy_state`` to allow to specify the desired state this role
   should achieve. State ``absent`` is not fully implemented yet. [ypid]
 
+- Added ``nginx_timeout``, allowing to achieve a desired delay after restart
+  or reload nginx. [solo]
+
 v0.1.6
 ------
 

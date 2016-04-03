@@ -12,9 +12,15 @@
   service:
     name: 'nginx'
     state: 'restarted'
+  notify: Time to wait after restart or reload nginx
 
 - name: Reload nginx
   service:
     name: 'nginx'
     state: 'reloaded'
+  notify: Time to wait after restart or reload nginx
+
+- name: Time to wait after restart or reload nginx
+  command: sleep '{{ nginx_timeout }}'
+  when: (nginx_timeout is defined and nginx_timeout|int > 0)
 

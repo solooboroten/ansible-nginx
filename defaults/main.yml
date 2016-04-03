@@ -87,6 +87,9 @@ nginx_scgi_temp_path: '{{ nginx_temp_root_path }}/scgi'
 # Path of temporary iwsgi files
 nginx_uwsgi_temp_path: '{{ nginx_temp_root_path }}/uwsgi'
 
+# Timeout after restart or reload
+nginx_timeout: '0'
+
 # ---- Phusion Passenger support ----
 
 # APT repository which will be added for Phusion Passenger support
